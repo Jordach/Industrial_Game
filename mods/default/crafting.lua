@@ -441,13 +441,6 @@ minetest.register_craft({
 	recipe = "default:iron_lump",
 })
 
-
-minetest.register_craft({
-	type = "cooking",
-	output = "default:clay_brick",
-	recipe = "default:clay_lump",
-})
-
 --
 -- Fuels
 --

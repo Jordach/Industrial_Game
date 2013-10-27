@@ -143,4 +143,24 @@ minetest.register_node("default:stone_with_diamond", {
 	sounds = default.node_sound_stone_defaults(),
 })
 
--- 
+-- cooking and crafting
+
+--[[ Notes:
+the point of the moulds are to create higher quality ingots, eg, clay ones
+produce good quality, and platinum moulds create perfect quality ingots
+the better the quality, the better the tool. it's that simple.
+
+replacements are used to retrieve the ingot mould, eg, like peeling an
+egg off of a frying pan, (if it worked that way irl, you'd lose the
+pan everytime you cooked an egg; which is something you wouldnt want.)
+
+another note is that some ingots might cutting with diamonds, such as osmium
+and iridium.
+--]]
+
+minetest.register_craft({
+	type = "cooking",
+	output = "default:clay_mould", --ingot mould
+	recipe = "default:uncooked_mould", --the material is clay
+})
+
