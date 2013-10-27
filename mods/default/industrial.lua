@@ -38,6 +38,18 @@ minetest.register_ore({
 
 minetest.register_ore({
 	ore_type       = "scatter",
+	ore            = "default:stone_with_diamond",
+	wherein        = "default:stone",
+	clust_scarcity = 14*14*14,
+	clust_num_ores = 5,
+	clust_size     = 3,
+	height_min     = -31000,
+	height_max     = -512,
+	flags          = "absheight",
+})
+
+minetest.register_ore({
+	ore_type       = "scatter",
 	ore            = "default:stone_with_osmium",
 	wherein        = "default:stone",
 	clust_scarcity = 17*17*17,
@@ -116,6 +128,15 @@ minetest.register_node("default:stone_with_platinum", {
 minetest.register_node("default:stone_with_iridium", {
 	description = "Iridium Ore",
 	tiles = {"default_stone.png^indus_mineral_iridium.png"},
+	is_ground_content = true,
+	groups = {cracky=1},
+	drop = "default:iridium_lump",
+	sounds = default.node_sound_stone_defaults(),
+})
+
+minetest.register_node("default:stone_with_diamond", {
+	description = "Diamond Ore",
+	tiles = {"default_stone.png^indus_mineral_diamond.png"},
 	is_ground_content = true,
 	groups = {cracky=1},
 	drop = "default:iridium_lump",
