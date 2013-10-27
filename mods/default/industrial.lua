@@ -156,6 +156,11 @@ pan everytime you cooked an egg; which is something you wouldnt want.)
 
 another note is that some ingots might cutting with diamonds, such as osmium
 and iridium.
+
+textures with _nck_ in their name(s) are uncooked versions, such as the clay
+mould, which the cooked one is: indus_clay_mould.png and then uncooked one is
+indus_NCK_clay_mould.png (the nck is in caps to highlight what i mean by
+uncooked.
 --]]
 
 minetest.register_craft({
@@ -164,3 +169,12 @@ minetest.register_craft({
 	recipe = "default:uncooked_mould", --the material is clay
 })
 
+minetest.register_craftitem("default:clay_mould", {
+	description = "Cooked Clay Mould",
+	inventory_image = "indus_clay_mould.png",
+})
+
+minetest.register_craftitem("default:uncooked_clay_lump", {
+	description = "Uncooked Clay Mould",
+	inventory_image = "indus_nck_clay_mould.png",
+})
