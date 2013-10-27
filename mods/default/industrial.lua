@@ -174,7 +174,7 @@ minetest.register_craftitem("default:clay_mould", {
 	inventory_image = "indus_clay_mould.png",
 })
 
-minetest.register_craftitem("default:uncooked_clay_lump", {
+minetest.register_craftitem("default:uncooked_clay_mould", {
 	description = "Uncooked Clay Mould",
 	inventory_image = "indus_nck_clay_mould.png",
 })
