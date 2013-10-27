@@ -1,0 +1,4 @@
+this folder will contain the textures needed for the industral part of the
+industrial game
+
+eg, industrial_iridium_ore.png and such

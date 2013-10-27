@@ -36,8 +36,8 @@ minetest.register_craftitem("default:clay_lump", {
 })
 
 minetest.register_craftitem("default:steel_ingot", {
-	description = "Steel Ingot",
-	inventory_image = "default_steel_ingot.png",
+	description = "Low Quality Steel Ingot",
+	inventory_image = "indus_low_steel_ingot.png",
 })
 
 minetest.register_craftitem("default:mese_crystal_fragment", {
