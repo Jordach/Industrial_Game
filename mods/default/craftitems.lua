@@ -59,3 +59,13 @@ minetest.register_craftitem("default:obsidian_shard", {
 	description = "Obsidian Shard",
 	inventory_image = "default_obsidian_shard.png",
 })
+
+minetest.register_craftitem("default:gold_ingot", {
+	description = "8ct Gold Ingot",
+	inventory_image = "default_gold_ingot.png",
+})
+
+minetest.register_craftitem("default:gold_lump", {
+	description = "Gold Lump",
+	inventory_image = "default_gold_lump.png",
+})

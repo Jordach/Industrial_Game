@@ -5,6 +5,10 @@ please do not remove the multiline comments from the .lua files. these may
 help the developers on how minetest.<methods> work, and may also include hints
 on how large pieces of code work.
 
+if my random comments explaining how the game should and WILL work seem
+distracting, please just press that little hide comment button
+(this works in notepad++)
+
 PLEASE DO NOT DELETE THEM FROM THE FILES, MERGES WITH THEM WILL BE REVERTED.
 
 thank you.
@@ -33,6 +37,18 @@ minetest.register_ore({
 	clust_size     = 3,
 	height_min     = -31000,
 	height_max     = -512,
+	flags          = "absheight",
+})
+
+minetest.register_ore({
+	ore_type       = "scatter",
+	ore            = "default:stone_with_gold",
+	wherein        = "default:stone",
+	clust_scarcity = 8*8*8,
+	clust_num_ores = 8,
+	clust_size     = 3,
+	height_min     = -31000,
+	height_max     = -128,
 	flags          = "absheight",
 })
 
@@ -143,6 +159,14 @@ minetest.register_node("default:stone_with_diamond", {
 	sounds = default.node_sound_stone_defaults(),
 })
 
+minetest.register_node("default:stone_with_gold", {
+	description = "Gold Ore",
+	tiles = {"default_stone.png^default_mineral_gold.png"},
+	is_ground_content = true,
+	groups = {cracky=2},
+	drop = "default:gold_lump",
+	sounds = default.node_sound_stone_defaults(),
+})
 -- cooking and crafting
 
 --[[ Notes:
@@ -161,6 +185,12 @@ textures with _nck_ in their name(s) are uncooked versions, such as the clay
 mould, which the cooked one is: indus_clay_mould.png and then uncooked one is
 indus_NCK_clay_mould.png (the nck is in caps to highlight what i mean by
 uncooked.
+
+the old style method of creating ingots creates poor ones, and their style, eg:
+default:steel_ingot will not have their names changed. this makes life easier.
+however, good quality ingots will have this style of prefixes:
+default:g_steel_ingot the g being good quality, and perfect ingots are like
+this: default:p_steel_ingot, which the p means perfect.
 --]]
 
 minetest.register_craft({
@@ -177,4 +207,10 @@ minetest.register_craftitem("default:clay_mould", {
 minetest.register_craftitem("default:uncooked_clay_mould", {
 	description = "Uncooked Clay Mould",
 	inventory_image = "indus_nck_clay_mould.png",
+})
+
+minetest.register_craft({
+	type = "cooking",
+	output = "default:gold_ingot", --ingot mould
+	recipe = "default:gold_lump", --the material is clay
 })
