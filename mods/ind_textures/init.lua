@@ -1,0 +1,2 @@
+--this folder contains just and only textures
+--this is here so minetest doesn't shit itself.

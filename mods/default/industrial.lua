@@ -195,7 +195,7 @@ this: default:p_steel_ingot, which the p means perfect.
 
 minetest.register_craft({
 	type = "cooking",
-	output = "default:clay_mould", --ingot mould
+	output = "default:clay_mould", -- basic ingot mould
 	recipe = "default:uncooked_mould", --the material is clay
 })
 
@@ -204,13 +204,13 @@ minetest.register_craftitem("default:clay_mould", {
 	inventory_image = "indus_clay_mould.png",
 })
 
-minetest.register_craftitem("default:uncooked_clay_mould", {
+minetest.register_craftitem("default:uncooked_mould", {
 	description = "Uncooked Clay Mould",
 	inventory_image = "indus_nck_clay_mould.png",
 })
 
 minetest.register_craft({
 	type = "cooking",
-	output = "default:gold_ingot", --ingot mould
-	recipe = "default:gold_lump", --the material is clay
+	output = "default:gold_ingot", --produces a lq 8ct ingot.
+	recipe = "default:gold_lump",
 })
